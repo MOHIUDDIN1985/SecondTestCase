@@ -10,10 +10,11 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class LogInTest {
+	WebDriver driver;
 	@BeforeClass
 	public void Initiation() throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
-		WebDriver driver=new ChromeDriver();
+	    driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.navigate().to("https://demoqa.com/");
 		Thread.sleep(2000);
@@ -23,7 +24,7 @@ public class LogInTest {
 	
 	@Test
 	public void Login() throws InterruptedException{ {
-		WebDriver driver=new ChromeDriver();
+		
 	
 		driver.findElement(By.xpath("//h5[text()='Elements']")).click();
 		Thread.sleep(2000);
@@ -33,7 +34,7 @@ public class LogInTest {
 	}
 	@AfterClass
 	public void Close() {
-		WebDriver driver=new ChromeDriver();
+		
 		driver.quit();
 		
 		
