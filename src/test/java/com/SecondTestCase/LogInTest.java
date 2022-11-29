@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 //This test to automate demoqa site
+//Change for mamun
 public class LogInTest {
 	WebDriver driver;
 	@BeforeClass
@@ -17,7 +18,7 @@ public class LogInTest {
 	    driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.navigate().to("https://demoqa.com/");
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		((JavascriptExecutor) driver).executeScript("scroll(0,300)");
 	}
 	
