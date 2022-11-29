@@ -25,9 +25,9 @@ public class LogInTest {
 	@Test
 	public void Login() throws InterruptedException{ {
 		driver.findElement(By.xpath("//h5[text()='Elements']")).click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		driver.findElement(By.className("text")).click();
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 	}
 	}
 	@AfterClass
