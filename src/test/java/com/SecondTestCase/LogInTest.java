@@ -37,6 +37,16 @@ public class LogInTest {
 		driver.findElement(By.id("userEmail")).sendKeys("Mohi@gmail.com");
 		Thread.sleep(5000);
 	}
+	@Test
+	public void weatherLigIN() throws InterruptedException {
+		//System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
+	    driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.navigate().to("https://weather.com/");
+		Thread.sleep(3000);
+		((JavascriptExecutor) driver).executeScript("scroll(0,300)");
+	}
+	
 	@AfterClass
 	public void Close() {	
 		driver.quit();		
